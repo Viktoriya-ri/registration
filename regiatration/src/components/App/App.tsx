@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {User} from './App.types';
 
-function App() {
+type Props = { 
+  user: User;
+}
+ export function App({user}: Props) {
   return (
     <div className="App">
+      <h1>{user.name}</h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+
